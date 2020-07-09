@@ -54,7 +54,7 @@
       - mv fine_tuned_model.zip /valohai/outputs/
       - zip -r models.zip models
       - mv models.zip /valohai/outputs/
-      - python3 export_tflitessd_graph.py --input_type image_tensor --pipeline_config_path=./ssd_mobilenet_v2_coco.config --trained_checkpoint_prefix=./models/train/model.ckpt-{parameters} --output_directory=./tflite_model
+      - python3 export_tflite_ssd_graph.py --input_type image_tensor --pipeline_config_path=./ssd_mobilenet_v2_coco.config --trained_checkpoint_prefix=./models/train/model.ckpt-{parameters} --output_directory=./tflite_model
       - zip -r tflite_model.zip tflite_model
       - mv tflite_model.zip /valohai/outputs/
       - mv tensorflow.log /valohai/outputs/
@@ -92,7 +92,7 @@
       - mv fine_tuned_model.zip /valohai/outputs/
       - zip -r models.zip models
       - mv models.zip /valohai/outputs/
-      - python3 export_tflitessd_graph.py --input_type image_tensor --pipeline_config_path=./ssd_mobilenet_v2_coco.config --trained_checkpoint_prefix=./models/train/model.ckpt-{parameters} --output_directory=./tflite_model
+      - python3 export_tflite_ssd_graph.py --input_type image_tensor --pipeline_config_path=./ssd_mobilenet_v2_coco.config --trained_checkpoint_prefix=./models/train/model.ckpt-{parameters} --output_directory=./tflite_model
       - zip -r tflite_model.zip tflite_model
       - mv tflite_model.zip /valohai/outputs/
       - mv train.zip /valohai/outputs/
