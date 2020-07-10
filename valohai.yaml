@@ -44,8 +44,9 @@
       - cp /valohai/repository/deepfashion_label_map.pbtxt training/data/
       - cp /valohai/inputs/train_records/train.record training/data/
       - cp /valohai/inputs/val_records/val.record training/data/
-      - unzip /valohai/inputs/trained_net/models.zip -d training/
+      - unzip /valohai/inputs/fine_tuned_model.zip -d training/
       - cp export_inference_graph.py training/
+      - cp export_tflite_ssd_graph.py training/
       - cd training/
       - ls ./models/train/
       - python3 train.py --logtostderr --train_dir=./models/train --pipeline_config_path=ssd_mobilenet_v2_coco.config
